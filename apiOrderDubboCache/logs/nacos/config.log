@@ -1477,3 +1477,42 @@ com.alibaba.nacos.api.exception.NacosException: Client not connected, current st
 	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
 2024-03-25 22:47:34.024 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
 2024-03-25 22:47:34.024 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-06 13:33:22.988 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-06 13:33:22.989 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-06 13:33:22.990 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-06 13:33:23.013 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-06 13:33:23.017 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:D:\桌面\API extend project\API-Intelligent-Platform/apiOrderDubboCache\nacos\config
+2024-04-06 13:33:24.605 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34953819-36ef-4dfe-b7f8-2b875ee8204f_config-0] Connected,notify listen context...
+2024-04-06 13:33:24.640 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-06 13:33:30.913 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-06 13:33:30.913 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] dubbo.configurators+dubbo
+2024-04-06 13:33:30.927 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=dubbo.configurators, group=dubbo, cnt=1
+2024-04-06 13:33:30.933 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.InnerOrderService::.configurators+dubbo
+2024-04-06 13:33:30.934 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.InnerOrderService::.configurators, group=dubbo, cnt=1
+2024-04-06 13:33:31.184 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] dubbo.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-06 13:33:31.184 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=dubbo.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-06 13:33:31.466 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [824f7896-b685-4b61-bc43-953f0ac219ab_config-0] Connected,notify listen context...
+2024-04-06 13:33:31.471 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
+2024-04-06 13:33:31.481 INFO [DubboSaveMetadataReport-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.czq.apicommon.service.InnerOrderService:::provider:dubbo, group=dubbo, tenant=, config={"annotations":[],"canonicalName":"com.czq.apicommon.service.InnerOrderService","codeSource":"file:/...
+2024-04-06 13:33:31.549 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.InnerUserService::.condition-router+dubbo
+2024-04-06 13:33:31.549 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.InnerUserService::.condition-router, group=dubbo, cnt=1
+2024-04-06 13:33:31.553 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] dubbo.condition-router+dubbo
+2024-04-06 13:33:31.553 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=dubbo.condition-router, group=dubbo, cnt=1
+2024-04-06 13:33:31.714 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] dy-api-admin.MESHAPPRULE+dubbo
+2024-04-06 13:33:31.714 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=dy-api-admin.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-06 13:33:31.715 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] dy-api-admin.tag-router+dubbo
+2024-04-06 13:33:31.715 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=dy-api-admin.tag-router, group=dubbo, cnt=1
+2024-04-06 13:33:31.721 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.InnerUserService::.configurators+dubbo
+2024-04-06 13:33:31.721 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.InnerUserService::.configurators, group=dubbo, cnt=1
+2024-04-06 13:33:31.931 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.InnerUserService+mapping
+2024-04-06 13:33:31.931 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.InnerUserService, group=mapping, cnt=1
+2024-04-06 13:33:31.969 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.ApiBackendService::.condition-router+dubbo
+2024-04-06 13:33:31.969 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
+2024-04-06 13:33:31.985 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.ApiBackendService::.configurators+dubbo
+2024-04-06 13:33:31.985 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
+2024-04-06 13:33:32.192 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-2:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.czq.apicommon.service.ApiBackendService+mapping
+2024-04-06 13:33:32.192 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-2:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.czq.apicommon.service.ApiBackendService, group=mapping, cnt=1
+2024-04-06 13:33:32.276 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:dubbo.configurators+dubbo
+2024-04-06 13:33:32.276 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:dubbo.configurators, group=dubbo, cnt=1
+2024-04-06 13:34:52.447 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-06 13:34:52.447 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed

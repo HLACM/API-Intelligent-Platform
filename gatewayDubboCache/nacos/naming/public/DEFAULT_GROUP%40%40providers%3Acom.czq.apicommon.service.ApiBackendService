@@ -1,1 +1,1 @@
-{"name":"providers:com.czq.apicommon.service.ApiBackendService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1711373601061,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}
+{"name":"providers:com.czq.apicommon.service.ApiBackendService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1712381633271,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}
