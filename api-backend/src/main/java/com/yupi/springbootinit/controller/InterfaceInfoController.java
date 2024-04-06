@@ -364,7 +364,48 @@ public class InterfaceInfoController {
         return ResultUtils.success(res);
     }
 
+    /**
+     * 测试调用接口
+     * @param classPath 接口对应sdk路径
+     * @param methodName 接口名称（方法名称）
+     * @param userRequestParams 接口参数
+     * @param accessKey
+     * @param secretKey
+     * @return
+     */
+    private Object invokeInterfaceInfo(String classPath, String methodName, String userRequestParams,
+                                       String accessKey, String secretKey) {
+        try {
+            //使用传入的类路径（classPath），通过反射获取对应的类对象（clientClazz）
+            Class<?> clientClazz = Class.forName(classPath);
+            // 1. 获取构造器，参数为ak,sk（使用反射获取构造器对象，再创建对应的sdk客户端对象）
+            Constructor<?> binApiClientConstructor = clientClazz.getConstructor(String.class, String.class);
+            // 2. 构造出客户端，以NameApiClient方法为例便于理解
+            Object apiClient =  binApiClientConstructor.newInstance(accessKey, secretKey);
 
+            // 3. 找到要调用的方法（getName）
+            Method[] methods = clientClazz.getMethods();
+            for (Method method : methods) {
+                if (method.getName().equals(methodName)) {
+                    // 3.1 获取参数类型列表，列表元素类型是xxx.class对象，这里获取到user.class
+                    Class<?>[] parameterTypes = method.getParameterTypes();
+                    if (parameterTypes.length == 0) {
+                        // 如果没有参数，直接调用invoke方法运行对应方法
+                        //invoke(Object obj,Object...args)，第一个参数为对应调用该方法的对象，后面的为调用方法传递的参数
+                        return method.invoke(apiClient);
+                    }
+                    Gson gson = new Gson();
+                    // 如有参数，使用 Gson 库将传入的json参数字符串（userRequestParams）转换为对应的对象parameterTypes[0]（user.class）。
+                    Object parameter = gson.fromJson(userRequestParams, parameterTypes[0]);
+                    return method.invoke(apiClient, parameter);
+                }
+            }
+            return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR, "找不到调用的方法!! 请检查你的请求参数是否正确!");
+        }
+    }
 
     @GetMapping("/sdk")
     public void getSdk(HttpServletResponse response) throws IOException {
