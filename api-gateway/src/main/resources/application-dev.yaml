@@ -1,0 +1,57 @@
+server:
+  port: 8090
+  servlet:
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+        #cookie作用域
+#        domain: #
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: api_order_route
+          uri: lb://api-order
+          predicates:
+            - Path=/api/order/**
+        - id: api_third_route
+          uri: lb://api-third-party
+          predicates:
+            - Path=/api/third/**
+        - id: api_backend_route
+          uri: lb://api-backend
+          predicates:
+            - Path=/api/**
+
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 5000
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            trace
+
+dubbo:
+  application:
+    name: dy-api2
+    qosEnableL: true
+    qosPort: 2223
+    qosAcceptForeignIp: false
+  protocol:
+    name: dubbo
+    port: 22221
+  registry:
+    id: nacos-registry2
+    address: nacos://localhost:8848

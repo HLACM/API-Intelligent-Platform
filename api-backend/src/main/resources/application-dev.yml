@@ -1,0 +1,76 @@
+# 公共配置文件
+spring:
+  application:
+    name: api-backend
+    cloud:
+      nacos:
+        discovery:
+          server-addr: 127.0.0.1:8848
+  # 默认 dev 环境
+  #  profiles:
+  #    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/api
+    username: root
+    password: 123456
+  # Redis 配置
+  redis:
+    database: 1
+    host: localhost
+    port: 6379
+    timeout: 5000
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    #确认消息已发送到交换机(Exchange)
+    publisher-confirm-type: correlated
+    #确认消息已发送到队列(Queue)
+    publisher-returns: true
+    listener:
+      simple:
+        # 确定机制
+        acknowledge-mode: manual
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+        #cookie作用域
+#        domain: #
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 0 # 逻辑已删除值（默认为 1）
+      logic-not-delete-value: 1 # 逻辑未删除值（默认为 0）
+
+
+dubbo:
+  application:
+    #指定 Dubbo 应用程序的名称，该名称将在 Dubbo 注册中心中标识该应用程序。
+    name: dy-api-admin
+  protocol:
+    #指定 Dubbo 使用的通信协议，这里设置为 dubbo
+    name: dubbo
+    #指定 Dubbo 服务提供者的监听端口
+    port: 22224
+  #指定 Dubbo 使用的注册中心的标识符，这里设置为 nacos-registry
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
