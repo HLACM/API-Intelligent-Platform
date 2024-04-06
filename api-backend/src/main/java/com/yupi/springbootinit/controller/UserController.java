@@ -57,7 +57,7 @@ public class UserController {
 
     /**
      * 用户注册
-     *
+     * 单独使用一个自定义的账号注册的一个账号
      * @param userRegisterRequest
      * @return
      */
@@ -79,7 +79,7 @@ public class UserController {
     }
 
     /**
-     * 用户注册
+     * 用户注册（使用邮箱号）
      *
      * @param userRegisterRequest
      * @return
@@ -96,7 +96,6 @@ public class UserController {
             log.error("邮箱或邮箱验证码不能为空！！！");
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"邮箱或邮箱验证码不能为空！！！");
         }
-
         long result = userService.userEmailRegister(emailNum,emailCaptcha);
         return ResultUtils.success(result);
     }

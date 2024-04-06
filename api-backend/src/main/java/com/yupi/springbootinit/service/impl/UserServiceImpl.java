@@ -118,6 +118,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 //            throw new BusinessException(ErrorCode.PARAMS_ERROR, "手机号错误!");
 //        }
 
+        //防止点击过快发送多个请求使数据库多出多个账号
         synchronized (userAccount.intern()) {
             // 账户不能重复
             QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -295,9 +296,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
 
+    /**
+     * 发送邮箱验证码
+     * @param email 邮箱号
+     * @param captchaType 验证码类型
+     */
     @Override
     public void sendCode(String email, String captchaType) {
-
 
         if (StringUtils.isBlank(captchaType)){
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"验证码类型为空!!!");
@@ -334,7 +339,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             //2.符合限流规则则生成手机短信
             String code = RandomUtil.randomNumbers(4);
             SmsMessage smsMessage = new SmsMessage(email, code);
-
 
             //消息队列异步发送短信，提高短信的吞吐量
             rabbitTemplate.convertAndSend(EXCHANGE_SMS_INFORM,ROUTINGKEY_SMS,smsMessage);
@@ -423,6 +427,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
 
+    /**
+     * 邮箱号注册
+     * @param emailNum 邮箱号
+     * @param emailCaptcha 邮箱验证码
+     * @return
+     */
     @Override
     public long userEmailRegister(String emailNum, String emailCaptcha) {
         if (!emailCodeValid(emailNum, emailCaptcha)) {

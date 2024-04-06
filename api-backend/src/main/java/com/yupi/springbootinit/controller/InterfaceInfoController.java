@@ -255,8 +255,6 @@ public class InterfaceInfoController {
     public BaseResponse<Boolean> onlineInterfaceInfo(@RequestBody IdRequest idRequest,
                                                      HttpServletRequest request) {
 
-
-        //3.修改接口的状态为发布状态
         if (idRequest == null || idRequest.getId() == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -282,6 +280,7 @@ public class InterfaceInfoController {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "系统接口内部异常");
         }
 
+        //3.修改接口的状态为发布状态
         InterfaceInfo updateInterfaceInfo = new InterfaceInfo();
         updateInterfaceInfo.setId(id);
         updateInterfaceInfo.setStatus(InterfaceInfoStateEnum.online.getValue());
@@ -299,16 +298,17 @@ public class InterfaceInfoController {
     @AuthCheck(mustRole = "admin")
     public BaseResponse<Boolean> offlineInterfaceInfo(@RequestBody IdRequest idRequest,
                                                      HttpServletRequest request) {
-        //1.判断接口是否存在
-        //2.修改接口的状态为发布状态
+
         if (idRequest == null || idRequest.getId() == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         long id = idRequest.getId();
+        //1.判断接口是否存在
         InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(id);
         if (oldInterfaceInfo == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }
+        //2. 仅本人或管理员可修改，修改接口的状态为下线状态
         InterfaceInfo interfaceInfo = new InterfaceInfo();
         interfaceInfo.setId(id);
         interfaceInfo.setStatus(InterfaceInfoStateEnum.offline.getValue());

@@ -35,13 +35,13 @@ public class SendMessageOperation {
             // 设置邮件编码
             mail.setCharset("UTF-8");
             // 设置邮件主题
-            mail.setSubject("Chen API");
+            mail.setSubject("API-Intelligent");
 
             String code = RandomUtil.getFourBitRandom();
             //设置数据的5分钟有效期限
             redisTemplate.opsForValue().set(LOGINCODEPRE+targetEmail,code,5,TimeUnit.MINUTES);
             // 设置邮件内容
-            mail.setMsg("您的注册 or 登录 验证码为："+code+",验证码5分钟内有效!!!"+"[Chen API]");
+            mail.setMsg("您的注册 or 登录 验证码为："+code+",验证码5分钟内有效!!!"+"[API-Intelligent]");
             // 设置邮件发送时间
             mail.setSentDate(new Date());
             // 发送邮件
