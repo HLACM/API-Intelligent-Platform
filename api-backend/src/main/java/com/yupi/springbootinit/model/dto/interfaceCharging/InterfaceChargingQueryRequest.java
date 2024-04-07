@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * 查询请求
  *
- * @author niuma
+ *  
  */
 @Data
 public class InterfaceChargingQueryRequest extends PageRequest implements Serializable {

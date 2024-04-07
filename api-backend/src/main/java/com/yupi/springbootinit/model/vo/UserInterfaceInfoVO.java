@@ -5,6 +5,9 @@ import lombok.Data;
 import java.io.Serializable;
 
 
+/**
+ * 用户查看自己的接口视图
+ */
 @Data
 public class UserInterfaceInfoVO implements Serializable {
     private static final long serialVersionUID = -1277232101530908019L;

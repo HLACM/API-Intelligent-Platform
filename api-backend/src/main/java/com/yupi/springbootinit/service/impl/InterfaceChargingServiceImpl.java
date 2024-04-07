@@ -7,7 +7,7 @@ import com.yupi.springbootinit.mapper.InterfaceChargingMapper;
 import org.springframework.stereotype.Service;
 
 /**
- *
+ * 付费接口业务层
  */
 @Service
 public class InterfaceChargingServiceImpl extends ServiceImpl<InterfaceChargingMapper, InterfaceCharging>

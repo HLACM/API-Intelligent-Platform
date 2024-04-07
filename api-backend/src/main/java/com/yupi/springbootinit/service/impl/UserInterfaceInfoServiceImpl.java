@@ -31,7 +31,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- *
+ * 用户接口信息服务实现类
  */
 @Service
 public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoMapper, UserInterfaceInfo>
@@ -47,6 +47,11 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     private InterfaceInfoService interfaceInfoService;
 
 
+    /**
+     * 判断新增用户接口数据时参数是否合法
+     * @param userInterfaceInfo
+     * @param add
+     */
     @Override
     public void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add) {
         if (userInterfaceInfo == null) {
@@ -65,9 +70,14 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
 
         }
 
-
     }
 
+    /**
+     * 调用接口统计，用户每次调用接口成功，次数+1
+     * @param interfaceInfoId
+     * @param userId
+     * @return
+     */
     @Transactional
     @Override
     public boolean invokeCount(long userId, long interfaceInfoId) {
@@ -88,13 +98,11 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         UserInterfaceInfo userInterfaceInfo = userInterfaceInfoMapper.selectOne(queryWrapper);
         Integer version = userInterfaceInfo.getVersion();
 
-
         Integer leftNum = userInterfaceInfo.getLeftNum();
         if (leftNum<=0){
             log.error("接口剩余调用次数不足");
             return false;
         }
-
 
         UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
         updateWrapper.eq("userId",userId);
@@ -105,6 +113,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         return this.update(updateWrapper);
 
     }
+
 
     @Override
     public boolean recoverInvokeCount(long userId, long interfaceInfoId) {
@@ -131,6 +140,11 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     }
 
 
+    /**
+     * 更新表中用户剩余调用次数
+     * @param updateUserInterfaceInfoDTO
+     * @return
+     */
     @Override
     public boolean updateUserInterfaceInfo(UpdateUserInterfaceInfoDTO updateUserInterfaceInfoDTO) {
         Long userId = updateUserInterfaceInfoDTO.getUserId();
@@ -148,7 +162,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         );
 
         if (one != null) {
-            // 说明是增加数量
+            // 说明是增加调用次数
             return this.update(
                     new UpdateWrapper<UserInterfaceInfo>()
                             .eq("userId", userId)
@@ -156,7 +170,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
                             .setSql("leftNum = leftNum + " + lockNum)
             );
         } else {
-            // 说明是第一次购买
+            // 说明是第一次购买接口
             UserInterfaceInfo userInterfaceInfo = new UserInterfaceInfo();
             userInterfaceInfo.setUserId(userId);
             userInterfaceInfo.setInterfaceInfoId(interfaceId);
@@ -166,6 +180,12 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
 
     }
 
+    /**
+     * 获取我的接口
+     * @param userId
+     * @param request
+     * @return
+     */
     @Override
     public List<UserInterfaceInfoVO> getInterfaceInfoByUserId(Long userId, HttpServletRequest request) {
         User loginUser = userService.getLoginUser(request);
@@ -178,22 +198,26 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         QueryWrapper<UserInterfaceInfo> userInterfaceInfoQueryWrapper= new QueryWrapper<>();
         userInterfaceInfoQueryWrapper.eq("userId",loginUser.getId());
         List<UserInterfaceInfo> userInterfaceInfoList = this.list(userInterfaceInfoQueryWrapper);
-
-        Map<Long, List<UserInterfaceInfo>> interfaceIdUserInterfaceInfoMap = userInterfaceInfoList.stream().collect(Collectors.groupingBy(UserInterfaceInfo::getInterfaceInfoId));
+        //将用户接口信息列表按照 interfaceInfoId 进行分组，得到一个Map集合，其中键是接口信息ID，值是该接口信息ID对应的用户接口信息列表。
+        Map<Long, List<UserInterfaceInfo>> interfaceIdUserInterfaceInfoMap = userInterfaceInfoList.stream().
+                collect(Collectors.groupingBy(UserInterfaceInfo::getInterfaceInfoId));
+        //返回所有接口信息ID集合
         Set<Long> interfaceIds = interfaceIdUserInterfaceInfoMap.keySet();
         QueryWrapper<InterfaceInfo> interfaceInfoQueryWrapper = new QueryWrapper<>();
         if(CollectionUtil.isEmpty(interfaceIds)){
             return new ArrayList<>();
         }
         interfaceInfoQueryWrapper.in("id",interfaceIds);
+        //查询符合条件的对应的接口的信息
         List<InterfaceInfo> interfaceInfoList = interfaceInfoService.list(interfaceInfoQueryWrapper);
+        //将接口信息列表转换为用户接口信息视图对象 UserInterfaceInfoVO 的列表。
         List<UserInterfaceInfoVO> userInterfaceInfoVOList = interfaceInfoList.stream().map(interfaceInfo -> {
             UserInterfaceInfoVO userInterfaceInfoVO = new UserInterfaceInfoVO();
-            // 复制接口信息
+            //通过 BeanUtils.copyProperties() 方法将接口信息的属性复制到 UserInterfaceInfoVO 中
             BeanUtils.copyProperties(interfaceInfo, userInterfaceInfoVO);
             userInterfaceInfoVO.setInterfaceStatus(Integer.valueOf(interfaceInfo.getStatus()));
 
-            // 复制用户调用接口信息
+            // 从之前分组的用户接口信息列表中取出第一个用户接口信息，并将其属性复制到 UserInterfaceInfoVO 中。
             List<UserInterfaceInfo> userInterfaceInfos = interfaceIdUserInterfaceInfoMap.get(interfaceInfo.getId());
             UserInterfaceInfo userInterfaceInfo = userInterfaceInfos.get(0);
             BeanUtils.copyProperties(userInterfaceInfo, userInterfaceInfoVO);

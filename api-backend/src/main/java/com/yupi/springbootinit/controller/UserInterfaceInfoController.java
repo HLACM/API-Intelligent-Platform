@@ -202,9 +202,17 @@ public class UserInterfaceInfoController {
         return ResultUtils.success(userInterfaceInfoPage);
     }
 
+    /**
+     * 展示我的接口
+     * @param userId
+     * @param request
+     * @return
+     */
     @GetMapping("/list/userId")
-    public BaseResponse<List<UserInterfaceInfoVO>> getInterfaceInfoByUserId(@RequestParam Long userId, HttpServletRequest request) {
-        List<UserInterfaceInfoVO > userInterfaceInfoVOList = userInterfaceInfoService.getInterfaceInfoByUserId(userId, request);
+    public BaseResponse<List<UserInterfaceInfoVO>> getInterfaceInfoByUserId(@RequestParam Long userId,
+                                                                            HttpServletRequest request) {
+        List<UserInterfaceInfoVO > userInterfaceInfoVOList =
+                userInterfaceInfoService.getInterfaceInfoByUserId(userId, request);
         return ResultUtils.success(userInterfaceInfoVOList);
     }
 
@@ -218,6 +226,7 @@ public class UserInterfaceInfoController {
     public BaseResponse<Boolean> getFreeInterfaceCount(@RequestBody UpdateUserInterfaceInfoDTO updateUserInterfaceInfoDTO, HttpServletRequest request) {
         Long interfaceId = updateUserInterfaceInfoDTO.getInterfaceId();
         Long userId = updateUserInterfaceInfoDTO.getUserId();
+        //lockNum为免费调用次数，前端默认发送100次
         Long lockNum = updateUserInterfaceInfoDTO.getLockNum();
         if (interfaceId == null || userId == null || lockNum == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
@@ -225,15 +234,18 @@ public class UserInterfaceInfoController {
         if (lockNum > 100) {
             throw new BusinessException(ErrorCode.OPERATION_ERROR, "您一次性获取的次数太多了");
         }
+        //锁住 userId，确保在多线程环境下对同一个用户进行操作时的线程安全性
         synchronized (userId) {
             User loginUser = userService.getLoginUser(request);
             if (!userId.equals(loginUser.getId())) {
                 throw new BusinessException(ErrorCode.NO_AUTH_ERROR);
             }
+            //查询具有指定接口ID的付费接口数量。如果数量大于0，表示该接口为付费接口，抛出业务异常。
             long interfaceCharging = interfaceChargingService.count(new QueryWrapper<InterfaceCharging>().eq("interfaceId", interfaceId));
             if (interfaceCharging > 0) {
                 throw new BusinessException(ErrorCode.PARAMS_ERROR, "这个是付费接口噢!");
             }
+            //获取次数大于等于1000次也抛异常
             UserInterfaceInfo one = userInterfaceInfoService.getOne(new QueryWrapper<UserInterfaceInfo>().eq("userId", userId).eq("interfaceInfoId", interfaceId));
             if (one != null && one.getLeftNum() >= 1000) {
                 throw new BusinessException(ErrorCode.OPERATION_ERROR, "您获取的次数太多了");

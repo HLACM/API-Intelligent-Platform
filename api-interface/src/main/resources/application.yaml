@@ -23,7 +23,7 @@ mybatis-plus:
     map-underscore-to-camel-case: false
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
-# 仅供SDK测试的配置
+# 供SDK测试的配置
 czq:
   api:
     access-key: czq

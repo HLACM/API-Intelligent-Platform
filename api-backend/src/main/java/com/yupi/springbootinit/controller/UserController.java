@@ -212,12 +212,13 @@ public class UserController {
     /**
      * 更新头像
      *
-     * @param file
+     * @param file MultipartFile对象用于接收客户端上传的文件数据，并提供了一系列方法来操作这些文件数据
      * @param request
      * @return
      */
     @PostMapping("/update/avatar")
-    public BaseResponse<Boolean> updateUserAvatar(@RequestParam(required = false) MultipartFile file, HttpServletRequest request) {
+    public BaseResponse<Boolean> updateUserAvatar(@RequestParam(required = false) MultipartFile file,
+                                                  HttpServletRequest request) {
         if (!FileUploadUtil.validate(file)) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -390,6 +391,11 @@ public class UserController {
     }
 
 
+    /**
+     * 用户获取自己的ak,sk
+     * @param request
+     * @return
+     */
     @GetMapping("/key")
     public BaseResponse<UserDevKeyVO> getKey(HttpServletRequest request) {
         User loginUser = userService.getLoginUser(request);
@@ -409,6 +415,11 @@ public class UserController {
         return ResultUtils.success(userDevKeyVO);
     }
 
+    /**
+     * 重新生成ak,sk
+     * @param request
+     * @return
+     */
     @PostMapping("/gen/key")
     public BaseResponse<UserDevKeyVO> genKey(HttpServletRequest request) {
         UserDevKeyVO userDevKeyVO = userService.genkey(request);

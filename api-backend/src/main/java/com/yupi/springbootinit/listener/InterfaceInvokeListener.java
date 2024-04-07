@@ -23,8 +23,6 @@ import static com.czq.apicommon.constant.RabbitmqConstant.QUEUE_INTERFACE_CONSIS
 @Slf4j
 public class InterfaceInvokeListener {
 
-    @Resource
-    private StringRedisTemplate stringRedisTemplate;
 
     @Resource
     private UserInterfaceInfoService userInterfaceInfoService;

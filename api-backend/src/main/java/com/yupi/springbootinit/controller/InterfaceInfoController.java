@@ -318,7 +318,7 @@ public class InterfaceInfoController {
 
     /**
      *  在线调用接口
-     * @param interfaceInfoInvokeRequest
+     * @param interfaceInfoInvokeRequest 包含id和用户请求参数
      * @param request
      * @return
      */
@@ -354,7 +354,8 @@ public class InterfaceInfoController {
 
         //3.发起接口调用
         String requestParams= interfaceInfoInvokeRequest.getUserRequestParams();
-        Object res = invokeInterfaceInfo(interfaceInfo.getSdk(), interfaceInfo.getName(), requestParams, accessKey, secretKey);
+        Object res = invokeInterfaceInfo(interfaceInfo.getSdk(), interfaceInfo.getName(),
+                requestParams, accessKey, secretKey);
         if (res == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }
@@ -365,7 +366,7 @@ public class InterfaceInfoController {
     }
 
     /**
-     * 测试调用接口
+     * 测试调用接口是否能调通
      * @param classPath 接口对应sdk路径
      * @param methodName 接口名称（方法名称）
      * @param userRequestParams 接口参数
@@ -407,17 +408,24 @@ public class InterfaceInfoController {
         }
     }
 
+    /**
+     * 用户下载SDK接口
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("/sdk")
     public void getSdk(HttpServletResponse response) throws IOException {
-        // 获取要下载的文件
+        // 通过ClassPathResource创建一个类路径下的资源对象，指定要下载的文件为 "api-client-sdk-0.0.1.jar"
         org.springframework.core.io.Resource resource = new ClassPathResource("api-client-sdk-0.0.1.jar");
         InputStream inputStream = resource.getInputStream();
 
-        // 设置响应头
+        // 设置响应头（设置响应头是为了告诉客户端如何处理服务器返回的数据）
+        // 表示这是一个二进制文件流，适用于下载文件
         response.setContentType("application/octet-stream");
+        //指定了文件名为 "api-client-sdk-0.0.1.jar"，并设置了 attachment，表示以附件形式下载。
         response.setHeader("Content-Disposition", "attachment; filename=api-client-sdk-0.0.1.jar");
 
-        // 将文件内容写入响应
+        // 使用 try-with-resources 语法创建一个输出流，用于将文件内容写入 HTTP 响应。
         try (OutputStream out = response.getOutputStream()) {
             byte[] buffer = new byte[4096];
             int length;

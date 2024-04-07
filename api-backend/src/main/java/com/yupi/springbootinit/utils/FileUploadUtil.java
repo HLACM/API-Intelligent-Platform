@@ -12,13 +12,18 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- * @author niuma
- * @create 2023-06-04 15:39
+ *  
  */
 public class FileUploadUtil {
     private static final List<String> ALLOWED_IMAGE_TYPES = Arrays.asList("image/jpeg", "image/png", "image/gif");
     private static final int THREE_M = 3 * 1024 * 1024;
 
+
+    /**
+     * 上传用户头像文件到阿里云 OSS（Object Storage Service）中，并返回上传后的文件在 OSS 上的访问 URL
+     * @param file
+     * @return
+     */
     public static String uploadFileAvatar(MultipartFile file) {
 
         if(!validate(file)){
@@ -31,9 +36,7 @@ public class FileUploadUtil {
         String accessKeySecret = OOSConstantPropertiesUtils.ACCESS_KEY_SECRET;
         String bucketName = OOSConstantPropertiesUtils.BUCKET_NAME;
 
-
         InputStream inputStream = null;
-
 
         try {
             // 创建OSS实例。
@@ -42,13 +45,11 @@ public class FileUploadUtil {
             // 获取上传文件的输入流
             inputStream = file.getInputStream();
 
-
             //获取文件名称
             String fileName = file.getOriginalFilename();
             //添加随机值
             String uuid = UUID.randomUUID().toString().replaceAll("-", "");
             fileName = uuid + fileName;
-
 
             //把文件按照日期分类
             //获取当前日期

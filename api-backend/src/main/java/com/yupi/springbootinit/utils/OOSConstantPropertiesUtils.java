@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-//当项目已启动，spring接口，spring加载之后，执行接口一个方法
+/**
+ * 声明了要加载类路径下的 application-oos.properties 文件
+ * 实现了 InitializingBean 接口，在 Bean 初始化完成后会执行 afterPropertiesSet方法
+ */
 @Configuration
 @PropertySource("classpath:application-oos.properties")
 @NoArgsConstructor

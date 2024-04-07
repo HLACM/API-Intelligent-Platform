@@ -16,5 +16,9 @@ public class UpdateUserInterfaceInfoDTO implements Serializable {
 
     private Long interfaceId;
 
+    /**
+     * 调用次数
+     * 如果是免费获取则前端默认发送100次
+     */
     private Long lockNum;
 }

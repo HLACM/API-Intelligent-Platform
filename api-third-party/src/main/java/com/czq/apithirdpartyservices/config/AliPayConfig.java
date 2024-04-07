@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * @author niumazlb
+ *  zlb
  */
 @Configuration
 @PropertySource("classpath:application-alipay.properties")

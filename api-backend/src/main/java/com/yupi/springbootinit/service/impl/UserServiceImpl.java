@@ -68,7 +68,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     /**
      * 盐值，混淆密码
      */
-    private static final String SALT = "chen";
+    private static final String SALT = "cai";
 
     @Resource
     private RabbitTemplate rabbitTemplate;
@@ -173,7 +173,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             log.info("user login failed, userAccount cannot match userPassword");
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户不存在或密码错误");
         }
-        // 3. 记录用户的登录态
+        // 3.调用方法将用户信息存入Redis中
         return setLoginUser(response, user);
     }
 
@@ -187,12 +187,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      */
     @Override
     public User getLoginUser(HttpServletRequest request) {
-        // 先判断是否已登录
+        // 先判断是否已登录。getUserIdByToken方法主要是从token中取出UserId并返回
         Long userId = JwtUtils.getUserIdByToken(request);
         if (userId == null){
             throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
         }
-
         String userJson = stringRedisTemplate.opsForValue().get(USER_LOGIN_STATE+userId);
         User user = gson.fromJson(userJson, User.class);
         if (user == null){
@@ -406,6 +405,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return userDevKeyVO;
     }
 
+    /**
+     * 通过邮箱验证码进行登录
+     * @param emailNum
+     * @param emailCode
+     * @param request
+     * @param response
+     * @return
+     */
     @Override
     public LoginUserVO userLoginBySms(String emailNum, String emailCode, HttpServletRequest request, HttpServletResponse response) {
 
@@ -422,7 +429,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if(user == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"用户不存在！");
         }
-
+        //调用方法将用户信息存入Redis中
         return setLoginUser(response, user);
     }
 
@@ -467,6 +474,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    /**
+     * 上传头像功能
+     * @param file
+     * @param request
+     * @return
+     */
     @Override
     public boolean uploadFileAvatar(MultipartFile file, HttpServletRequest request) {
         User loginUser = this.getLoginUser(request);
@@ -474,6 +487,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         //更新持久层用户头像信息
         User updateUser = new User();
         updateUser.setId(loginUser.getId());
+        //调用方法返回上传后的文件在阿里云OSS上的访问 URL
         String url = FileUploadUtil.uploadFileAvatar(file);
         updateUser.setUserAvatar(url);
         boolean result = this.updateById(updateUser);
@@ -518,16 +532,26 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * @return
      */
     private LoginUserVO setLoginUser(HttpServletResponse response, User user) {
+        //生成一个 JWT Token，该 Token 包含了用户的 ID 和用户名等信息
         String token = JwtUtils.getJwtToken(user.getId(), user.getUserName());
+        //创建一个名为 "token" 的 Cookie
         Cookie cookie = new Cookie("token", token);
+        //设置 Cookie 的路径为根路径，表示在整个网站范围内都可使用该Cookie
         cookie.setPath("/");
         response.addCookie(cookie);
         String userJson = gson.toJson(user);
-        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + user.getId(), userJson, JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
+        //将用户登录态存储进Redis中
+        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + user.getId(), userJson,
+                JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
         return this.getLoginUserVO(user);
     }
 
 
+    /**
+     * 重新生成一个ak,sk并返回
+     * @param userAccount
+     * @return
+     */
     private UserDevKeyVO genKey(String userAccount){
         String accessKey = DigestUtil.md5Hex(SALT + userAccount + RandomUtil.randomNumbers(5));
         String secretKey = DigestUtil.md5Hex(SALT + userAccount + RandomUtil.randomNumbers(8));

@@ -5,8 +5,8 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author niuma
- * @create 2023-05-11 14:13
+ *  
+ * 
  */
 @Data
 public class UserDevKeyVO implements Serializable {
