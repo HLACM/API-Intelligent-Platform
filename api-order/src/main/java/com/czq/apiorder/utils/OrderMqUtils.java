@@ -17,6 +17,10 @@ import static com.czq.apiorder.config.RabbitmqConfig.EXCHANGE_ORDER_PAY;
 import static com.czq.apiorder.config.RabbitmqConfig.ROUTINGKEY_ORDER_PAY;
 
 
+/**
+ * 发送订单消息工具类
+ * 用于发送订单消息到 RabbitMQ 中，并实现了 RabbitMQ 的确认和返回消息回调接口
+ */
 @Slf4j
 @Component
 public class OrderMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTemplate.ReturnsCallback{
@@ -33,10 +37,10 @@ public class OrderMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTempl
      */
     public void sendOrderSnInfo(Order order){
         finalId = order.getId();
+        //生成全局唯一的消息id
         String finalMessageId = IdUtil.simpleUUID();
         rabbitTemplate.convertAndSend(EXCHANGE_ORDER_PAY,ROUTINGKEY_ORDER_PAY,order, message -> {
             MessageProperties messageProperties = message.getMessageProperties();
-            //生成全局唯一id
             messageProperties.setMessageId(finalMessageId);
             //设置消息的有效时间
 //            message.getMessageProperties().setExpiration("1000*60");

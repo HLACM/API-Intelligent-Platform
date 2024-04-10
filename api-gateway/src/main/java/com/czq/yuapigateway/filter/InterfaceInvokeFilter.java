@@ -34,10 +34,14 @@ import java.util.concurrent.TimeUnit;
 import static com.czq.apicommon.constant.RabbitmqConstant.EXCHANGE_INTERFACE_CONSISTENT;
 import static com.czq.apicommon.constant.RabbitmqConstant.ROUTING_KEY_INTERFACE_CONSISTENT;
 
+/**
+ * api-interface模块路由过滤器
+ */
 @Component
 @Slf4j
 public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
 
+    //api-interface模块地址，用于拼接字符串
     private static final String INTERFACE_HOST="http://localhost:8123";
 
     @DubboReference
@@ -64,12 +68,15 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
         //8.接口调用次数+1
 
         //1.打上请求日志
+        //exchange对象包含了请求和响应的相关信息以及访问和修改这些信息的方法，通过getRequest()来获取请求相关信息
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
 
+        //request.getPath().value()获取请求的路径后缀（如/api/name/get），拼接上主机地址
         String path = INTERFACE_HOST+request.getPath().value();
         String method = request.getMethod().toString();
 
+        //通过request对象获取请求的信息并输出在日志中
         log.info("请求id:"+request.getId());
         log.info("请求URI:"+request.getURI());
         log.info("请求PATH:"+request.getPath());
@@ -84,7 +91,9 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
 //            return response.setComplete();
 //        }
 
-        //3.用户鉴权(API签名认证)
+        //3.用户鉴权(API签名认证，即判断 ak、sk 是否合法)
+        //获取请求头中的信息。ServerHttpRequest和原来使用的HttpServletRequest是有所不同的，不能直接获取值
+        //所以先获取HttpHeaderds对象，然后再调用该对象中的getFirst方法。（get方法返回的是List类型）
         HttpHeaders headers = request.getHeaders();
 
         String accessKey = headers.getFirst("accessKey");
@@ -94,7 +103,7 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
         String timestamp = headers.getFirst("timestamp");
 
 
-        //根据accessKey获取secretKey，判断accessKey是否合法
+        //根据accessKey判断用户是否存在（有权限调用），如有再获取secretKey
         User invokeUser = null;
         try {
             invokeUser = apiBackendService.getInvokeUser(accessKey);
@@ -102,12 +111,13 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
             log.error("远程调用获取调用接口用户的信息失败");
             e.printStackTrace();
         }
-
+        //未查询到用户则无权限
         if (invokeUser == null){
             return handleNoAuth(response);
         }
 
         String secretKey = invokeUser.getSecretKey();
+        //调用SignUtils来用相同方法生成一个签名来和预期的签名做一个比对
         String serverSign = SignUtils.generateSign(body, secretKey);
 
         if (sign == null || !sign.equals(serverSign)){
@@ -115,11 +125,12 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
             return handleNoAuth(response);
         }
 
-        //3.1防重放，使用redis存储请求的唯一标识，随机时间，并定时淘汰，那使用什么redis结构来实现嗯？
-        //既然是单个数据，这样用string结构实现即可
-
-        Boolean success = stringRedisTemplate.opsForValue().setIfAbsent(nonce, "1", 5, TimeUnit.MINUTES);
-        if (success ==null){
+        //3.1防重放，每个随机数只能使用一次，如果该随机数已使用过则无权限访问。
+        // 使用redis存储请求的唯一标识，随机时间，并定时淘汰，那使用什么redis结构来实现嗯？
+        //既然是单个数据，这样用string结构实现即可。setIfAbsent：只有在指定的 key 不存在时才会设置成功
+        Boolean success = stringRedisTemplate.opsForValue().
+                setIfAbsent(nonce, "1", 5, TimeUnit.MINUTES);
+        if (success ==false){
             log.error("随机数存储失败!!!!");
             return handleNoAuth(response);
         }
@@ -133,13 +144,10 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
             e.printStackTrace();
         }
 
-
         if (interFaceInfo == null){
             log.error("接口不存在！！！！");
             return handleNoAuth(response);
         }
-
-
 
         //5.判断接口是否还有调用次数，并且统计接口调用，将二者转化成原子性操作(backend本地服务的本地事务实现)，解决二者数据一致性问题
         boolean result=false;
@@ -165,7 +173,7 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
     }
 
     /**
-     * 处理无权限调用异常
+     * 处理无权限调用异常，设置状态码后直接结束该次请求
      * @param response
      * @return
      */

@@ -16,10 +16,10 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
-        - id: api_order_route
-          uri: lb://api-order
-          predicates:
-            - Path=/api/order/**
+        - id: api_order_route # 路由规则id，自定义，唯一
+          uri: lb://api-order # 路由的目标服务，lb代表负载均衡，会从nacos注册中心拉取服务列表
+          predicates: # 路由断言
+            - Path=/api/order/** # 以请求路径作为判断规则
         - id: api_third_route
           uri: lb://api-third-party
           predicates:

@@ -27,6 +27,9 @@ import static com.czq.apicommon.constant.RabbitmqConstant.*;
 import static com.czq.apicommon.constant.RedisConstant.*;
 
 
+/**
+ * 监听用户支付成功的消息
+ */
 @Component
 @Slf4j
 public class OrderPaySuccessListener {

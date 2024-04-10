@@ -14,9 +14,9 @@ import static com.czq.apicommon.constant.RabbitmqConstant.ORDER_SUCCESS_EXCHANGE
 import static com.czq.apicommon.constant.RedisConstant.SEND_ORDER_PAY_SUCCESS_INFO;
 
 
-
 /**
-
+ * 发送订单号的MQ工具类
+ *
  */
 @Component
 @Slf4j

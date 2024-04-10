@@ -27,7 +27,6 @@ public class RabbitmqConfig {
     public static final String QUEUE_ORDER_DLX_QUEUE = "queue_order_dlx_queue";
     //定义死信交换机
     public static final String EXCHANGE_ORDER_DLX_EXCHANGE = "exchange_order_dlx_exchange";
-
     //绑定
     public static final String ROUTINGKEY_DLX_ORDER_PAY ="routing.dlx.order.pay";
 
@@ -54,6 +53,7 @@ public class RabbitmqConfig {
         args.put("x-dead-letter-exchange", EXCHANGE_ORDER_DLX_EXCHANGE);
         // 绑定我们的路由key
         args.put("x-dead-letter-routing-key", ROUTINGKEY_DLX_ORDER_PAY);
+        //如果消息在队列中滞留超过 30 分钟，将会路由给死信队列交换机
         args.put("x-message-ttl", 30*60000);
         // 这里测试1分钟
 //        args.put("x-message-ttl", 60000);

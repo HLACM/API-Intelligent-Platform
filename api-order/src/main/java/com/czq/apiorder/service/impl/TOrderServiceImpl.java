@@ -70,8 +70,12 @@ public class TOrderServiceImpl extends ServiceImpl<TOrderMapper, Order>
     public static final String USER_LOGIN_STATE = "user:login:";
 
 
-
-
+    /**
+     * 创建订单
+     * @param orderAddRequest
+     * @param request
+     * @return
+     */
     @Transactional
     @Override
     public OrderVO addOrder(OrderAddRequest orderAddRequest, HttpServletRequest request) {
@@ -86,12 +90,10 @@ public class TOrderServiceImpl extends ServiceImpl<TOrderMapper, Order>
         Double charging = orderAddRequest.getCharging();
         Integer count = orderAddRequest.getCount();
         BigDecimal totalAmount = orderAddRequest.getTotalAmount();
-
-
+        //订单业务需严谨，每个参数都不能少
         if (userId == null || interfaceId == null || count ==null || totalAmount == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-
 
 
         if (count<=0 || totalAmount.compareTo(new BigDecimal(0)) < 0){
@@ -104,19 +106,19 @@ public class TOrderServiceImpl extends ServiceImpl<TOrderMapper, Order>
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"用户不存在");
         }
 
+        //获取接口详细信息
         InterfaceInfo interfaceInfo = apiBackendService.getInterfaceById(interfaceId);
         if (interfaceInfo == null){
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"接口不存在");
         }
 
-        // 后端校验订单总价格
+        // 后端校验订单总价格（防止前端算的不准确或随便乱传）
         double temp = charging * count;
         BigDecimal bd = new BigDecimal(temp);
         double finalPrice = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         if (finalPrice != totalAmount.doubleValue()) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "价格错误");
         }
-
 
 
 //        2.判断接口调用库存是否足够

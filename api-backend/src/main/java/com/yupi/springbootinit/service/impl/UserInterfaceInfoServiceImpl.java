@@ -74,6 +74,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
 
     /**
      * 调用接口统计，用户每次调用接口成功，次数+1
+     * 将判断接口是否还有调用次数和统计接口调用两个操作放到一个方法中，并成为一个事务，解决二者数据一致性问题
      * @param interfaceInfoId
      * @param userId
      * @return
@@ -83,15 +84,11 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     public boolean invokeCount(long userId, long interfaceInfoId) {
 
         //校验用户id，接口id是否合理
-        //校验用户的接口剩余调用次数是否充足
-        //接口总调用次数+1，剩余调用次数-1
-        //考虑计数的并发安全问题如何解决
-
         if (userId<0 || interfaceInfoId<0){
             throw new BusinessException(ErrorCode.PARAMS_ERROR,"用户或接口不存在");
         }
 
-        //查询调用接口详情，包括剩余次数和调用版本号
+        //查询调用接口详情，包括剩余次数和调用乐观锁版本号，校验用户的接口剩余调用次数是否充足
         QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userId",userId);
         queryWrapper.eq("interfaceInfoId",interfaceInfoId);
@@ -104,10 +101,13 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
             return false;
         }
 
+        //接口总调用次数+1，剩余调用次数-1
+        //考虑计数的并发安全问题如何解决
         UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
         updateWrapper.eq("userId",userId);
         updateWrapper.eq("interfaceInfoId",interfaceInfoId);
         updateWrapper.eq("version",version);
+        //再次检查leftNum防止接口调用次数越界（乐观锁思想解决技术的并发安全问题）
         updateWrapper.gt("leftNum",0);
         updateWrapper.setSql("totalNum = totalNum +1,leftNum = leftNum-1,version = version+1");
         return this.update(updateWrapper);
@@ -115,6 +115,12 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     }
 
 
+    /**
+     * 接口调用失败，需要对数据进行回滚
+     * @param userId
+     * @param interfaceInfoId
+     * @return
+     */
     @Override
     public boolean recoverInvokeCount(long userId, long interfaceInfoId) {
         if (userId<0 || interfaceInfoId<0){
@@ -128,6 +134,12 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         return this.update(updateWrapper);
     }
 
+    /**
+     * 获取用户所拥有的接口剩余调用次数
+     * @param userId
+     * @param interfaceInfoId
+     * @return
+     */
     @Override
     public int getLeftInvokeCount(long userId, long interfaceInfoId) {
         //1.根据用户id和接口id获取用户接口关系详情对象

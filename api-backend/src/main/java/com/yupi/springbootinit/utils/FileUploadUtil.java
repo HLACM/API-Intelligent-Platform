@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 /**
- *  
+ *  上传图片工具类
  */
 public class FileUploadUtil {
     private static final List<String> ALLOWED_IMAGE_TYPES = Arrays.asList("image/jpeg", "image/png", "image/gif");

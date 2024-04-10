@@ -18,7 +18,9 @@ import java.io.IOException;
 
 import static com.czq.apiorder.config.RabbitmqConfig.QUEUE_ORDER_DLX_QUEUE;
 
-
+    /**
+     * 监听死信队列，订单超时未支付则回滚库存并设置订单状态
+     */
     @Component
 @Slf4j
 public class OrderTimeOutListener {
