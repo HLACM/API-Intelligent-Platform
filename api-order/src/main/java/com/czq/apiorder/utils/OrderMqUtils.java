@@ -49,7 +49,7 @@ public class OrderMqUtils implements RabbitTemplate.ConfirmCallback, RabbitTempl
         });
     }
 
-    /**
+     /**
      * 1、只要消息抵达服务器，那么b=true
      * @param correlationData 当前消息的唯一关联数据（消息的唯一id）
      * @param success 消息是否成功收到

@@ -36,6 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 @RestController
 @RequestMapping("/analysis")
 @Slf4j
@@ -50,7 +51,8 @@ public class AnalysisController {
     @Resource
     private UserInterfaceInfoService userInterfaceInfoService;
 
-//    当初没加check = false导致一直报错，因为还没有这个类的服务提供者，当初可能也是忘删了
+//    当初没加check = false导致一直报错，check = false 表示关闭了 Dubbo 引用服务的启动时检查，
+//    默认情况下 Dubbo 会在服务启动时检查引用的服务是否可用，服务提供者在apiorder模块下，启动这个模块时apiorder还没有启动
     @DubboReference(check = false)
     private InnerOrderService innerOrderService;
 
@@ -58,8 +60,6 @@ public class AnalysisController {
     @GetMapping("top/interface/invoke")
     @AuthCheck(mustRole = "admin")
     public BaseResponse<List<InterfaceInfoVo>> listTopInterfaceInfo(){
-
-
 
         List<UserInterfaceInfoAnalysisVo> interfaceInfoVoList = userInterfaceInfoMapper.listTopInterfaceInfo(3);
 

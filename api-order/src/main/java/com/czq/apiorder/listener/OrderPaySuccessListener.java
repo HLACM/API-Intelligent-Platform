@@ -65,6 +65,7 @@ public class OrderPaySuccessListener {
         String orderSn = redisTemplate.opsForValue().get( CONSUME_ORDER_PAY_SUCCESS_INFO+outTradeNo);
 
         if (StringUtils.isNoneBlank(orderSn)){
+            //在消费者成功处理完消息后，向 RabbitMQ 确认消息已经被消费，并告知 RabbitMQ 将该消息从队列中移除，以避免消息重复消费或被其他消费者处理。
             channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
             return;
         }

@@ -64,7 +64,6 @@ public class OrderTimeOutListener {
             }
         }
 
-
         channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
     }
 

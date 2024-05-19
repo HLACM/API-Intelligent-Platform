@@ -31,7 +31,11 @@ public class LeakyBucket {
     }
 
 
-
+    /**
+     * 发送验证码限流
+     * @param lastTime 上次发送验证码的时间
+     * @return
+     */
     public boolean control(long lastTime) {
 
         //每60s生产一个令牌，且桶的容量是1。因为每个人60s内就只能发送一次短信

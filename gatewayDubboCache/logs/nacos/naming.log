@@ -7075,3 +7075,734 @@ java.net.ConnectException: Connection refused: connect
 2024-04-06 13:34:51.378 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
 2024-04-06 13:34:51.383 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@ffebc7[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 19]
 2024-04-06 13:34:51.383 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-04-18 10:55:06.553 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 10:55:06.554 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 10:55:06.554 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 10:55:06.690 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 10:55:06.698 INFO [restartedMain:c.a.n.c.naming] [REGISTER-SERVICE] public registering service api-gateway with instance Instance{instanceId='null', ip='192.168.137.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2024-04-18 10:55:06.876 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 10:55:06.876 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 10:55:06.876 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 10:55:07.006 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 10:55:07.108 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService::, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.117 INFO [restartedMain:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713408793934"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.117 INFO [restartedMain:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,updateUserInterfaceInvokeCount,getInterFaceInfo,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"9192","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1712381584388"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.118 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713408793934"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.119 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.122 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService -> []
+2024-04-18 10:55:07.122 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService -> []
+2024-04-18 10:55:07.252 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService::, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.252 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.299 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 10:55:07.299 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 10:55:07.299 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 10:55:07.423 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 10:55:07.461 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dubbo-springboot-demo-provider, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.466 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@dubbo-springboot-demo-provider -> []
+2024-04-18 10:55:07.466 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@dubbo-springboot-demo-provider -> []
+2024-04-18 10:55:07.490 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dubbo-springboot-demo-provider, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.490 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dy-api-admin, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.494 INFO [restartedMain:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"4347cd430075a64d405de2c9f1246783","dubbo.metadata.storage-type":"local","timestamp":"1713408797438"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.494 INFO [restartedMain:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"432b6a1605ee401bf1e332b7bacde1b1","dubbo.metadata.storage-type":"local","timestamp":"1712381585424"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.494 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"4347cd430075a64d405de2c9f1246783","dubbo.metadata.storage-type":"local","timestamp":"1713408797438"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:55:07.802 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:55:07.804 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-04-18 10:55:07.804 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-04-18 10:55:07.805 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:57:53.897 INFO [boundedElastic-1:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:api-backend, group:DEFAULT_GROUP, clusters: 
+2024-04-18 10:57:53.901 INFO [boundedElastic-1:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@api-backend -> [{"ip":"192.168.137.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-backend","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 10:57:53.901 INFO [boundedElastic-1:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@api-backend -> [{"ip":"192.168.137.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-backend","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:00:52.156 INFO [boundedElastic-1:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:api-order, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:00:52.159 INFO [boundedElastic-1:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@api-order -> [{"ip":"192.168.137.1","port":9001,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:00:52.159 INFO [boundedElastic-1:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@api-order -> [{"ip":"192.168.137.1","port":9001,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-order","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:01:29.445 INFO [boundedElastic-1:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:api-third-party, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:01:29.448 INFO [boundedElastic-1:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@api-third-party -> [{"ip":"192.168.137.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-third-party","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:01:29.448 INFO [boundedElastic-1:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@api-third-party -> [{"ip":"192.168.137.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-third-party","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:02:07.492 INFO [boundedElastic-1:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:api-interface, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:02:07.495 INFO [boundedElastic-1:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@api-interface -> [{"ip":"192.168.137.1","port":8123,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-interface","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:02:07.495 INFO [boundedElastic-1:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@api-interface -> [{"ip":"192.168.137.1","port":8123,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-interface","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:04:19.318 INFO [Thread-2:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service consumers:com.czq.apicommon.service.ApiBackendService:: with instance: Instance{instanceId='null', ip='192.168.137.1', port=0, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-04-18 11:04:19.335 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-04-18 11:04:19.335 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-04-18 11:04:19.335 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-04-18 11:04:19.335 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-04-18 11:04:19.336 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-04-18 11:04:19.336 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-04-18 11:04:19.667 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-04-18 11:04:19.667 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-04-18 11:04:19.667 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:04:19.667 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:04:19.667 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-04-18 11:04:19.668 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-04-18 11:04:19.668 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-04-18 11:04:19.668 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-04-18 11:04:19.668 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:04:19.668 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:04:19.668 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-04-18 11:04:19.673 INFO [Thread-2:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@c2a2f[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 183]
+2024-04-18 11:04:19.674 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-04-18 11:04:20.203 INFO [nacos-grpc-client-executor-localhost-162:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713408793934"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:04:20.204 INFO [nacos-grpc-client-executor-localhost-162:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> []
+2024-04-18 11:04:20.644 INFO [nacos-grpc-client-executor-127.0.0.1-138:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@api-third-party -> [{"ip":"192.168.137.1","port":9000,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-third-party","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:04:20.645 INFO [nacos-grpc-client-executor-127.0.0.1-138:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@api-third-party -> []
+2024-04-18 11:04:21.793 INFO [Thread-2:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service api-gateway with instance: Instance{instanceId='null', ip='192.168.137.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-04-18 11:04:21.797 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-04-18 11:04:21.797 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-04-18 11:04:21.797 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-04-18 11:04:21.797 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-04-18 11:04:21.797 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-04-18 11:04:21.798 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-04-18 11:04:22.106 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:04:22.106 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-04-18 11:04:22.106 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-04-18 11:04:22.107 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:04:22.107 WARN [Thread-2:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:04:22.107 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-04-18 11:04:22.107 INFO [Thread-2:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@1955c72[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 184]
+2024-04-18 11:04:22.107 INFO [Thread-2:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-04-18 11:05:08.532 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 11:05:08.533 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 11:05:08.533 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 11:05:08.650 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 11:05:08.650 INFO [restartedMain:c.a.n.c.naming] [REGISTER-SERVICE] public registering service api-gateway with instance Instance{instanceId='null', ip='192.168.137.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2024-04-18 11:05:08.764 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 11:05:08.764 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 11:05:08.764 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 11:05:08.884 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 11:05:08.937 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-18 11:05:08.937 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-18 11:05:08.937 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-18 11:05:09.056 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-18 11:05:09.057 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:05:09.060 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-04-18 11:05:09.060 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-04-18 11:05:09.061 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:05:22.897 INFO [boundedElastic-2:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:api-backend, group:DEFAULT_GROUP, clusters: 
+2024-04-18 11:05:22.927 INFO [boundedElastic-2:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@api-backend -> []
+2024-04-18 11:05:22.929 INFO [boundedElastic-2:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@api-backend -> []
+2024-04-18 11:05:27.305 INFO [nacos-grpc-client-executor-127.0.0.1-9:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@api-backend -> [{"ip":"192.168.137.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-backend","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:05:27.306 INFO [nacos-grpc-client-executor-127.0.0.1-9:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@api-backend -> [{"ip":"192.168.137.1","port":8080,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@api-backend","metadata":{"preserved.register.source":"SPRING_CLOUD"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:05:28.394 INFO [nacos-grpc-client-executor-localhost-178:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713409527508"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:05:28.394 INFO [nacos-grpc-client-executor-localhost-178:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713409527508"},"instanceHeartBeatTimeOut":15000,"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000}]
+2024-04-18 11:05:39.334 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-04-18 11:05:39.334 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-04-18 11:05:39.335 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:05:39.335 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-04-18 11:05:39.335 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:05:39.335 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:05:39.335 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-04-18 11:05:39.336 INFO [DubboShutdownHook:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@2a6fd0[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 10]
+2024-04-18 11:05:39.336 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-04-18 11:05:39.338 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service api-gateway with instance: Instance{instanceId='null', ip='192.168.137.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-04-18 11:05:39.340 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-04-18 11:05:39.667 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:05:39.667 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-04-18 11:05:39.667 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-18 11:05:39.667 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-18 11:05:39.667 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-04-18 11:05:39.668 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@4c4599[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 10]
+2024-04-18 11:05:39.668 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-05-19 16:14:35.765 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-05-19 16:14:35.766 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-05-19 16:14:35.766 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-05-19 16:14:35.902 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-05-19 16:14:35.903 INFO [restartedMain:c.a.n.c.naming] [REGISTER-SERVICE] public registering service api-gateway with instance Instance{instanceId='null', ip='192.168.88.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
+2024-05-19 16:14:36.215 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-05-19 16:14:36.215 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-05-19 16:14:36.215 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-05-19 16:14:36.360 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-05-19 16:14:36.481 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService::, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:36.493 INFO [restartedMain:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,updateUserInterfaceInvokeCount,getInterFaceInfo,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"14252","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1716106391520"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:36.494 INFO [restartedMain:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,getInterFaceInfo,updateUserInterfaceInvokeCount,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"24852","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713409527508"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:36.495 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,updateUserInterfaceInvokeCount,getInterFaceInfo,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"14252","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1716106391520"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:36.497 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:36.500 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService -> []
+2024-05-19 16:14:36.500 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService -> []
+2024-05-19 16:14:36.651 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService::, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:36.652 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.czq.apicommon.service.ApiBackendService, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:36.708 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-05-19 16:14:36.708 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-05-19 16:14:36.708 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-05-19 16:14:36.831 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-05-19 16:14:36.863 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dubbo-springboot-demo-provider, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:36.867 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@dubbo-springboot-demo-provider -> []
+2024-05-19 16:14:36.867 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@dubbo-springboot-demo-provider -> []
+2024-05-19 16:14:48.942 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dubbo-springboot-demo-provider, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:48.943 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:dy-api-admin, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:48.947 INFO [restartedMain:c.a.n.c.naming] new ips(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"432b6a1605ee401bf1e332b7bacde1b1","dubbo.metadata.storage-type":"local","timestamp":"1716106392660"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:48.948 INFO [restartedMain:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.137.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"4347cd430075a64d405de2c9f1246783","dubbo.metadata.storage-type":"local","timestamp":"1713408797438"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:48.948 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"432b6a1605ee401bf1e332b7bacde1b1","dubbo.metadata.storage-type":"local","timestamp":"1716106392660"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:14:49.273 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:14:49.276 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-05-19 16:14:49.276 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2 -> []
+2024-05-19 16:14:49.277 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2, group:DEFAULT_GROUP, clusters: 
+2024-05-19 16:15:35.614 INFO [nacos-grpc-client-executor-localhost-20:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@dy-api-admin -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@dy-api-admin","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"22224\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":22224,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"432b6a1605ee401bf1e332b7bacde1b1","dubbo.metadata.storage-type":"local","timestamp":"1716106392660"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:15:35.614 INFO [nacos-grpc-client-executor-localhost-27:c.a.n.c.naming] removed ips(1) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> [{"ip":"192.168.88.1","port":22224,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::","metadata":{"side":"provider","release":"3.0.9","methods":"recoverInterfaceStock,invokeCount,updateUserInterfaceInvokeCount,getInterFaceInfo,getLeftInvokeCount,updateInterfaceStock,getInterfaceById,getInvokeUser,getInterfaceStockById","deprecated":"false","dubbo":"2.0.2","pid":"14252","interface":"com.czq.apicommon.service.ApiBackendService","service-name-mapping":"true","generic":"false","path":"com.czq.apicommon.service.ApiBackendService","protocol":"dubbo","application":"dy-api-admin","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1716106391520"},"ipDeleteTimeout":30000,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000}]
+2024-05-19 16:15:35.614 INFO [nacos-grpc-client-executor-localhost-20:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@dy-api-admin -> []
+2024-05-19 16:15:35.614 INFO [nacos-grpc-client-executor-localhost-27:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService:: -> []
+2024-05-19 16:15:43.857 WARN [com.alibaba.nacos.client.naming.updater.4:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:15:52.179 WARN [com.alibaba.nacos.client.naming.updater.4:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:15:52.283 WARN [com.alibaba.nacos.client.naming.updater.1:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@dy-api-admin
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:15:52.644 WARN [com.alibaba.nacos.client.naming.updater.0:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:dy-api2
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:15:56.617 WARN [com.alibaba.nacos.client.naming.updater.1:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@dy-api-admin
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:16:04.955 WARN [com.alibaba.nacos.client.naming.updater.1:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@dy-api-admin
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:16:08.513 WARN [com.alibaba.nacos.client.naming.updater.7:c.a.n.c.naming] [NA] failed to update serviceName: DEFAULT_GROUP@@providers:com.czq.apicommon.service.ApiBackendService::
+com.alibaba.nacos.api.exception.NacosException: Request nacos server failed: 
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:288) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.queryInstancesOfService(NamingGrpcClientProxy.java:168) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.queryInstancesOfService(NamingClientProxyDelegate.java:110) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService$UpdateTask.run(ServiceInfoUpdateService.java:185) ~[nacos-client-2.1.0.jar:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_202]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_202]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_202]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_202]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202]
+Caused by: com.alibaba.nacos.api.exception.NacosException: Client not connected, current status:UNHEALTHY
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:651) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:631) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:278) ~[nacos-client-2.1.0.jar:na]
+	... 10 common frames omitted
+2024-05-19 16:16:13.632 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-05-19 16:16:13.632 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-05-19 16:16:13.633 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-05-19 16:16:13.633 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-05-19 16:16:13.633 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-05-19 16:16:13.633 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-05-19 16:16:13.961 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-05-19 16:16:13.961 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-05-19 16:16:13.961 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-05-19 16:16:13.961 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-05-19 16:16:13.961 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-05-19 16:16:13.962 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-05-19 16:16:13.962 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-05-19 16:16:13.962 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-05-19 16:16:13.962 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-05-19 16:16:13.962 WARN [DubboShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-05-19 16:16:13.962 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-05-19 16:16:13.963 INFO [DubboShutdownHook:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@664941[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 32]
+2024-05-19 16:16:13.964 INFO [DubboShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-05-19 16:16:13.965 INFO [DubboShutdownHook:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service consumers:com.czq.apicommon.service.ApiBackendService:: with instance: Instance{instanceId='null', ip='192.168.88.1', port=0, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-05-19 16:16:15.689 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:294) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:17.724 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:294) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:19.762 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:294) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:19.763 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] request: /nacos/v1/ns/operator/metrics failed, servers: [localhost:8848], code: 500, msg: Connection refused: connect
+2024-05-19 16:16:21.826 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:302) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:23.867 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:302) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:25.886 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] [NA] failed to request
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method) ~[na:1.8.0_202]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[na:1.8.0_202]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[na:1.8.0_202]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[na:1.8.0_202]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[na:1.8.0_202]
+	at java.net.Socket.connect(Socket.java:589) ~[na:1.8.0_202]
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339) ~[na:1.8.0_202]
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1220) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[na:1.8.0_202]
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:984) ~[na:1.8.0_202]
+	at com.alibaba.nacos.common.http.client.request.JdkHttpClientRequest.execute(JdkHttpClientRequest.java:114) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.execute(NacosRestTemplate.java:482) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.common.http.client.NacosRestTemplate.exchangeForm(NacosRestTemplate.java:427) ~[nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.callServer(NamingHttpClientProxy.java:488) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:421) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:392) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.reqApi(NamingHttpClientProxy.java:387) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy.serverHealthy(NamingHttpClientProxy.java:317) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.serverHealthy(NamingClientProxyDelegate.java:172) [nacos-client-2.1.0.jar:na]
+	at com.alibaba.nacos.client.naming.NacosNamingService.getServerStatus(NacosNamingService.java:450) [nacos-client-2.1.0.jar:na]
+	at org.apache.dubbo.registry.nacos.NacosNamingServiceWrapper.getServerStatus(NacosNamingServiceWrapper.java:43) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.nacos.NacosRegistry.isAvailable(NacosRegistry.java:146) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.ListenerRegistryWrapper.isAvailable(ListenerRegistryWrapper.java:47) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.integration.DynamicDirectory.destroy(DynamicDirectory.java:302) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.AbstractClusterInvoker.destroy(AbstractClusterInvoker.java:128) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.cluster.support.wrapper.MockClusterInvoker.destroy(MockClusterInvoker.java:82) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.registry.client.migration.MigrationInvoker.destroy(MigrationInvoker.java:325) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.proxy.InvokerInvocationHandler.invoke(InvokerInvocationHandler.java:59) [dubbo-3.0.9.jar:3.0.9]
+	at com.czq.apicommon.service.ApiBackendServiceDubboProxy0.$destroy(ApiBackendServiceDubboProxy0.java) [classes/:na]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyReference(SimpleReferenceCache.java:264) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.lambda$destroyAll$4(SimpleReferenceCache.java:253) [dubbo-3.0.9.jar:3.0.9]
+	at java.util.concurrent.ConcurrentHashMap.forEach(ConcurrentHashMap.java:1597) ~[na:1.8.0_202]
+	at org.apache.dubbo.config.utils.SimpleReferenceCache.destroyAll(SimpleReferenceCache.java:251) [dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.unreferServices(DefaultModuleDeployer.java:406) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.postDestroy(DefaultModuleDeployer.java:208) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ModuleModel.onDestroy(ModuleModel.java:109) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.rpc.model.ScopeModel.destroy(ScopeModel.java:110) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onContextClosedEvent(DubboDeployApplicationListener.java:130) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:102) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.apache.dubbo.config.spring.context.DubboDeployApplicationListener.onApplicationEvent(DubboDeployApplicationListener.java:45) ~[dubbo-3.0.9.jar:3.0.9]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:421) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:378) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1060) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.doClose(ReactiveWebServerApplicationContext.java:149) ~[spring-boot-2.7.13.jar:2.7.13]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1023) ~[spring-context-5.3.28.jar:5.3.28]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[na:1.8.0_202]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-2.7.13.jar:2.7.13]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_202]
+2024-05-19 16:16:25.887 ERROR [SpringApplicationShutdownHook:c.a.n.c.naming] request: /nacos/v1/ns/operator/metrics failed, servers: [localhost:8848], code: 500, msg: Connection refused: connect
+2024-05-19 16:16:25.899 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service api-gateway with instance: Instance{instanceId='null', ip='192.168.88.1', port=8090, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-05-19 16:16:26.228 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-05-19 16:16:26.228 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-05-19 16:16:26.228 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-05-19 16:16:26.228 WARN [SpringApplicationShutdownHook:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-05-19 16:16:26.228 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-05-19 16:16:26.229 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@8645d5[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 36]
+2024-05-19 16:16:26.229 INFO [SpringApplicationShutdownHook:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop

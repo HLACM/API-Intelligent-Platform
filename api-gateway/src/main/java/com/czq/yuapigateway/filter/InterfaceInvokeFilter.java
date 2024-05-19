@@ -126,7 +126,7 @@ public class InterfaceInvokeFilter implements GatewayFilter, Ordered {
         }
 
         //3.1防重放，每个随机数只能使用一次，如果该随机数已使用过则无权限访问。
-        // 使用redis存储请求的唯一标识，随机时间，并定时淘汰，那使用什么redis结构来实现嗯？
+        // 使用redis存储请求的唯一标识，随机时间，并定时淘汰，那使用什么redis结构来实现？
         //既然是单个数据，这样用string结构实现即可。setIfAbsent：只有在指定的 key 不存在时才会设置成功
         Boolean success = stringRedisTemplate.opsForValue().
                 setIfAbsent(nonce, "1", 5, TimeUnit.MINUTES);

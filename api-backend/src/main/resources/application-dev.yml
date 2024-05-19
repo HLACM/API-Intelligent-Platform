@@ -68,7 +68,7 @@ dubbo:
   protocol:
     #指定 Dubbo 使用的通信协议，这里设置为 dubbo
     name: dubbo
-    #指定 Dubbo 服务提供者的监听端口
+    #指定 Dubbo 服务提供者的监听端口，服务提供者将监听在该端口上等待消费者的调用
     port: 22224
   #指定 Dubbo 使用的注册中心的标识符，这里设置为 nacos-registry
   registry:
