@@ -1,4 +1,4 @@
 #Dubbo cache
-#Mon Mar 25 22:37:26 CST 2024
-com.czq.apicommon.service.InnerUserService=["dubbo-springboot-demo-provider","dy-api-admin"]
-com.czq.apicommon.service.ApiBackendService=["dubbo-springboot-demo-provider","dy-api-admin"]
+#Mon May 20 18:32:18 CST 2024
+com.czq.apicommon.service.InnerUserService=["dy-api-admin","dubbo-springboot-demo-provider"]
+com.czq.apicommon.service.ApiBackendService=["dy-api-admin","dubbo-springboot-demo-provider"]
