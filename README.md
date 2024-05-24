@@ -17,58 +17,58 @@
 
 - 登录页面
 
-![image-20240520183017050](assets/image-20240520183017050.png)
+![image-20240520183017050](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183017050.png)
 
 + 支持邮箱登录
 
-![image-20240520183039084](assets/image-20240520183039084.png)
+![image-20240520183039084](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183039084.png)
 
 
 
 
 - 首页
 
-![image-20240520183123231](assets/image-20240520183123231.png)
+![image-20240520183123231](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183123231.png)
 
 - 接口详情
 
-  ![image-20240520183156258](assets/image-20240520183156258.png)
+  ![image-20240520183156258](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183156258.png)
 
 - 接口调用
 
-![image-20240519164213306](assets/image-20240519164213306.png)
+![image-20240519164213306](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240519164213306.png)
 
 - 接口购买
 
-![image-20240520183242823](assets/image-20240520183242823.png)
+![image-20240520183242823](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183242823.png)
 
 - 接口支付
 
-![image-20240520183345803](assets/image-20240520183345803.png)
+![image-20240520183345803](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183345803.png)
 
 + 我的接口
 
-  ![image-20240520183435828](assets/image-20240520183435828.png)
+  ![image-20240520183435828](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183435828.png)
 
 
 
 - 接口管理
 
-![image-20240520183504182](assets/image-20240520183504182.png)
+![image-20240520183504182](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183504182.png)
 
 
 
 - 接口分析
 
-![image-20240520183534594](assets/image-20240520183534594.png)
+![image-20240520183534594](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183534594.png)
 
 - 用户管理
 
-![image-20240520183556020](assets/image-20240520183556020.png)
+![image-20240520183556020](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183556020.png)
 
 - 个人中心
 
-![image-20240520183637929](assets/image-20240520183637929.png)
+![image-20240520183637929](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/image-20240520183637929.png)
 
 
 
@@ -90,7 +90,7 @@
 
 
 ## 系统架构
-![系统架构图](assets/API系统架构图.png)
+![系统架构图](https://github.com/HLACM/API-Intelligent-Platform/blob/master/assets/API系统架构图.png)
 
 
 
